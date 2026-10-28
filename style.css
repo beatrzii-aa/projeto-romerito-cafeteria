@@ -182,7 +182,7 @@ body {
     border-color: palevioletred;
 }
 
-.badge--mais_pedido {
+.badge--mais-pedido {
     background-color: rgb(230, 173, 65);
     color: white;
     border-color: rgb(230, 173, 65);
@@ -251,3 +251,94 @@ footer img {
     object-fit: contain;
     margin-top: 15px;
 }
+
+/*CONFIGURAÇÕES DOS COMPONENTES*/
+.vitrine {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+ 
+.vitrine__intro {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ 
+.vitrine__titulo {
+    font-size: 2rem;
+    color: palevioletred;
+}
+ 
+.vitrine__grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    scroll-margin-top: 140px; 
+}
+ 
+.vitrine__subtitulo {
+    padding-bottom: 8px;
+    border-bottom: 3px solid pink;
+    font-size: 1.5rem;
+    color: #3e2723;
+}
+ 
+.vitrine__bloco {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 20px;
+}
+ 
+.vitrine__nome {
+    font-size: 1.2rem;
+    color: palevioletred;
+}
+ 
+.vitrine__demo {
+    padding: 30px 20px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: #fdf5e6;
+    border-radius: 12px;
+}
+
+.vitrine__demo--coluna {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.vitrine__demo--rosa {
+    background-color: pink;
+}
+ 
+.vitrine__classes {
+    font-family: monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.vitrine__estatico {
+    position: static;
+    border-radius: 8px;
+}
+
+.vitrine__badge {
+    position: static;
+}
+ 
+@media (max-width: 700px) {
+    .vitrine {
+        padding: 20px;
+    }
+}
+ 

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Componentes — Cafeteria SEB</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="componentes.css">
+</head>
+<body>
+
+<header class="cabecalho">
+    <div>
+        <img src="foto_logo.png" alt="Logo da Cafeteria SEB" class="img__nav_bar">
+    </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" class="nav__texto">Voltar ao site</a></li>
+      <li><a href="#simples" class="nav__texto">Simples</a></li>
+      <li><a href="#compostos" class="nav__texto">Compostos</a></li>
+    </ul>
+  </nav>
+  <div></div>
+</header>
+
+<main class="vitrine">
+
+  <section class="vitrine__intro">
+    <h1 class="vitrine__titulo">Biblioteca de componentes</h1>
+    <p>Componentes usados no site da Cafeteria SEB, isolados e com as mesmas classes do <code>index.html</code>. O layout com Flexbox fica nos containers (como <code>.produtos-grid</code> e <code>.hero</code>).</p>
+  </section>
+
+  <section class="vitrine__grupo" id="simples">
+    <h2 class="vitrine__subtitulo">Componentes simples</h2>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">Botão</h3>
+      <div class="vitrine__demo">
+        <button type="button" class="btn">Comprar</button>
+        <button type="button" class="btn">Enviar</button>
+        <button type="button" class="btn">Compre</button>
+      </div>
+      <p class="vitrine__classes">
+    
+      </p>
+    </article>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">Badge</h3>
+      <div class="vitrine__demo">
+        <span class="badge badge--destaque vitrine__badge">Destaque</span>
+        <span class="badge badge--cardapio vitrine__badge">Cardápio</span>
+        <span class="badge badge--mais_pedido vitrine__badge">Mais pedido</span>
+      </div>
+      <p class="vitrine__classes">
+       
+      </p>
+    </article>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">Link de navegação</h3>
+      <div class="vitrine__demo vitrine__demo--rosa">
+        <a href="#simples" class="nav__texto">Início</a>
+        <a href="#simples" class="nav__texto">Sobre</a>
+        <a href="#simples" class="nav__texto">Contato</a>
+      </div>
+      <p class="vitrine__classes">
+        Classe: .nav__texto<br>
+        Estado interativo: :hover (passe o mouse; o fundo muda)
+      </p>
+    </article>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">Título de seção</h3>
+      <div class="vitrine__demo">
+        <h2 class="titulo-secao">Pedidos em destaque</h2>
+      </div>
+      <p class="vitrine__classes">
+        Classe: .titulo-secao
+      </p>
+    </article>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">5. Logo</h3>
+      <div class="vitrine__demo">
+        <img src="foto_logo.png" alt="Logo da Cafeteria SEB" class="img__nav_bar">
+      </div>
+      <p class="vitrine__classes">
+
+      </p>
+    </article>
+  </section>
+
+  <section class="vitrine__grupo" id="compostos">
+    <h2 class="vitrine__subtitulo">Componentes compostos</h2>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">Cabeçalho com navbar</h3>
+      <p></p>
+      <div class="vitrine__demo vitrine__demo--coluna">
+        <div class="cabecalho vitrine__estatico">
+            <div>
+                <img src="foto_logo.png" alt="Logo da Cafeteria SEB" class="img__nav_bar">
+            </div>
+          <nav class="navbar">
+            <ul>
+              <li><a href="#compostos" class="nav__texto">Início</a></li>
+              <li><a href="#compostos" class="nav__texto">Sobre</a></li>
+              <li><a href="#compostos" class="nav__texto">Produto</a></li>
+              <li><a href="#compostos" class="nav__texto">Contato</a></li>
+            </ul>
+          </nav>
+          <div>
+            <button type="button" class="btn"><img src="foto_lupa.png" alt="Buscar"></button>
+            <button type="button" class="btn"><img src="foto_avatar.png" alt="Minha conta"></button>
+          </div>
+        </div>
+      </div>
+      <p class="vitrine__classes">
+
+      </p>
+    </article>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">2. Hero</h3>
+      <p>Combina título, texto, botão e imagem.</p>
+      <div class="vitrine__demo vitrine__demo--coluna">
+        <section class="hero">
+          <div class="hero-texto">
+            <h1>O melhor café da sua vida</h1>
+            <p>Grãos selecionados, torra fresca e aquele cheirinho que abraça.</p>
+            <button type="button" class="btn">Compre</button>
+          </div>
+          <img src="foto_hero.png" alt="Xícara de café SEB" class="img__hero">
+        </section>
+      </div>
+      <p class="vitrine__classes">
+        Classes: .hero, .hero-texto, .img__hero, .btn<br>
+        Flexbox: .hero (texto ao lado da imagem) e .hero-texto (itens em coluna)
+      </p>
+    </article>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">Card de produto</h3>
+      <p></p>
+      <div class="vitrine__demo">
+        <article class="card">
+          <span class="badge badge--destaque">Destaque</span>
+          <img src="cafe-irish.webp" alt="Café Irish">
+          <h2>Irish</h2>
+          <p>Descrição do produto em destaque.</p>
+          <button type="button" class="btn">Comprar</button>
+        </article>
+
+        <article class="card">
+          <span class="badge badge--cardapio">Cardápio</span>
+          <img src="cardapio.jpg" alt="Item do cardápio">
+          <h2>Nome do produto</h2>
+          <p>Descrição do item do cardápio.</p>
+          <button type="button" class="btn">Comprar</button>
+        </article>
+
+        <article class="card">
+          <span class="badge badge--mais_pedido">Mais pedido</span>
+          <img src="cardapio.jpg" alt="Item mais pedido">
+          <h2>Nome do produto</h2>
+          <p>Descrição do item mais pedido.</p>
+          <button type="button" class="btn">Comprar</button>
+        </article>
+      </div>
+      <p class="vitrine__classes">
+        
+      </p>
+    </article>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">Seção de produtos</h3>
+      <p></p>
+      <div class="vitrine__demo vitrine__demo--coluna">
+        <section class="secao-produtos">
+          <h2 class="titulo-secao">Cardápio</h2>
+
+          <div class="produtos-grid">
+            <article class="card">
+              <span class="badge badge--cardapio">Cardápio</span>
+              <img src="cardapio.jpg" alt="Item do cardápio">
+              <h2>Nome do produto</h2>
+              <p>Descrição do item do cardápio.</p>
+              <button type="button" class="btn">Comprar</button>
+            </article>
+
+            <article class="card">
+              <span class="badge badge--cardapio">Cardápio</span>
+              <img src="cardapio.jpg" alt="Item do cardápio 2">
+              <h2>Nome do produto 2</h2>
+              <p>Descrição do item do cardápio.</p>
+              <button type="button" class="btn">Comprar</button>
+            </article>
+          </div>
+        </section>
+      </div>
+      <p class="vitrine__classes">
+      </p>
+    </article>
+
+    <article class="vitrine__bloco">
+      <h3 class="vitrine__nome">Rodapé com bloco de contato</h3>
+      <p></p>
+      <div class="vitrine__demo vitrine__demo--coluna">
+        <footer>
+          <section>
+            <h2>Entre em contato</h2>
+            <form onsubmit="return false">
+              <label for="msg-demo">Mensagem</label>
+              <textarea id="msg-demo" placeholder="Mensagem"></textarea>
+              <button type="button" class="btn">Enviar</button>
+            </form>
+          </section>
+
+          <div>
+            <p>Agradecemos a compra<br>Bia, Emilly e Sofia</p>
+            <img src="foto_logo.png" alt="Logo da Cafeteria SEB">
+          </div>
+        </footer>
+      </div>
+      <p class="vitrine__classes">
+      </p>
+    </article>
+  </section>
+
+</main>
+
+</body>
+</html>
