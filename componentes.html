@@ -27,38 +27,43 @@
 
   <section class="vitrine__intro">
     <h1 class="vitrine__titulo">Biblioteca de componentes</h1>
-    <p>Componentes usados no site da Cafeteria SEB, isolados e com as mesmas classes do <code>index.html</code>. O layout com Flexbox fica nos containers (como <code>.produtos-grid</code> e <code>.hero</code>).</p>
+    <p>Componentes usados no site da Cafeteria SEB, isolados e com as mesmas classes do <code>index.html</code>. O layout com Flexbox fica nos containers, como <code>.produtos-grid</code> e <code>.hero</code>.</p>
   </section>
+  <br>
 
+  <!--COMPONENTES SIMPLES-->
   <section class="vitrine__grupo" id="simples">
     <h2 class="vitrine__subtitulo">Componentes simples</h2>
 
     <article class="vitrine__bloco">
-      <h3 class="vitrine__nome">Botão</h3>
+      <h3 class="vitrine__nome">1. Botão</h3>
       <div class="vitrine__demo">
         <button type="button" class="btn">Comprar</button>
         <button type="button" class="btn">Enviar</button>
         <button type="button" class="btn">Compre</button>
       </div>
       <p class="vitrine__classes">
-    
+        Classe: .btn<br>
+        Estado interativo: :hover (passe o mouse; a cor escurece)
       </p>
     </article>
 
     <article class="vitrine__bloco">
-      <h3 class="vitrine__nome">Badge</h3>
+      <h3 class="vitrine__nome">2. Badge</h3>
       <div class="vitrine__demo">
         <span class="badge badge--destaque vitrine__badge">Destaque</span>
         <span class="badge badge--cardapio vitrine__badge">Cardápio</span>
-        <span class="badge badge--mais_pedido vitrine__badge">Mais pedido</span>
+        <span class="badge badge--mais-pedido vitrine__badge">Mais pedido</span>
       </div>
       <p class="vitrine__classes">
-       
+        Base: .badge<br>
+        Variantes: .badge--destaque, .badge--cardapio, .badge--mais_pedido<br>
+        Obs.: no site o badge fica sobre o topo do card; aqui aparece solto só para demonstração.
       </p>
     </article>
 
     <article class="vitrine__bloco">
-      <h3 class="vitrine__nome">Link de navegação</h3>
+      <h3 class="vitrine__nome">3. Link de navegação</h3>
       <div class="vitrine__demo vitrine__demo--rosa">
         <a href="#simples" class="nav__texto">Início</a>
         <a href="#simples" class="nav__texto">Sobre</a>
@@ -71,7 +76,7 @@
     </article>
 
     <article class="vitrine__bloco">
-      <h3 class="vitrine__nome">Título de seção</h3>
+      <h3 class="vitrine__nome">4. Título de seção</h3>
       <div class="vitrine__demo">
         <h2 class="titulo-secao">Pedidos em destaque</h2>
       </div>
@@ -86,17 +91,19 @@
         <img src="foto_logo.png" alt="Logo da Cafeteria SEB" class="img__nav_bar">
       </div>
       <p class="vitrine__classes">
-
+        Classe: .img__nav_bar (usada no cabeçalho)
       </p>
     </article>
   </section>
 
+
+  <!--COMPONENTES COMPOSTOS-->
   <section class="vitrine__grupo" id="compostos">
     <h2 class="vitrine__subtitulo">Componentes compostos</h2>
 
     <article class="vitrine__bloco">
-      <h3 class="vitrine__nome">Cabeçalho com navbar</h3>
-      <p></p>
+      <h3 class="vitrine__nome">1. Cabeçalho com navbar</h3>
+      <p>Combina logo, links de navegação e botões de ícone.</p>
       <div class="vitrine__demo vitrine__demo--coluna">
         <div class="cabecalho vitrine__estatico">
             <div>
@@ -117,7 +124,9 @@
         </div>
       </div>
       <p class="vitrine__classes">
-
+        Classes: .cabecalho, .navbar, .nav__texto, .img__nav_bar, .btn<br>
+        Flexbox: .cabecalho (logo, menu e botões em linha) e .navbar ul (links em linha)<br>
+        Obs.: no site o cabeçalho é fixo no topo (position: sticky); aqui fica parado.
       </p>
     </article>
 
@@ -141,14 +150,14 @@
     </article>
 
     <article class="vitrine__bloco">
-      <h3 class="vitrine__nome">Card de produto</h3>
-      <p></p>
+      <h3 class="vitrine__nome">3. Card de produto</h3>
+      <p>Combina badge, imagem, título, texto e botão.</p>
       <div class="vitrine__demo">
         <article class="card">
           <span class="badge badge--destaque">Destaque</span>
           <img src="cafe-irish.webp" alt="Café Irish">
           <h2>Irish</h2>
-          <p>Descrição do produto em destaque.</p>
+          <p>O clássico irlandês que combina a energia do café com o calor do uísque e creme.</p>
           <button type="button" class="btn">Comprar</button>
         </article>
 
@@ -161,7 +170,7 @@
         </article>
 
         <article class="card">
-          <span class="badge badge--mais_pedido">Mais pedido</span>
+          <span class="badge badge--mais-pedido">Mais pedido</span>
           <img src="cardapio.jpg" alt="Item mais pedido">
           <h2>Nome do produto</h2>
           <p>Descrição do item mais pedido.</p>
@@ -169,13 +178,15 @@
         </article>
       </div>
       <p class="vitrine__classes">
-        
+        Classes: .card, .badge (3 variantes), .btn<br>
+        Estado interativo: :hover (o card sobe)<br>
+        Flexbox: .card (conteúdo em coluna)
       </p>
     </article>
 
     <article class="vitrine__bloco">
-      <h3 class="vitrine__nome">Seção de produtos</h3>
-      <p></p>
+      <h3 class="vitrine__nome">4. Seção de produtos</h3>
+      <p>Combina título de seção e uma lista de cards.</p>
       <div class="vitrine__demo vitrine__demo--coluna">
         <section class="secao-produtos">
           <h2 class="titulo-secao">Cardápio</h2>
@@ -200,12 +211,14 @@
         </section>
       </div>
       <p class="vitrine__classes">
+        Classes: .secao-produtos, .titulo-secao, .produtos-grid, .card<br>
+        Flexbox: .secao-produtos (coluna) e .produtos-grid (cards lado a lado com flex-wrap)
       </p>
     </article>
 
     <article class="vitrine__bloco">
-      <h3 class="vitrine__nome">Rodapé com bloco de contato</h3>
-      <p></p>
+      <h3 class="vitrine__nome">5. Rodapé com bloco de contato</h3>
+      <p>Combina título, campo de mensagem, botão, texto e logo.</p>
       <div class="vitrine__demo vitrine__demo--coluna">
         <footer>
           <section>
@@ -224,6 +237,9 @@
         </footer>
       </div>
       <p class="vitrine__classes">
+        Elementos: footer, form, textarea, .btn<br>
+        Estado interativo: :focus no textarea (clique no campo; a borda muda de cor)<br>
+        Flexbox: footer (blocos lado a lado) e footer form (campos em coluna)
       </p>
     </article>
   </section>
